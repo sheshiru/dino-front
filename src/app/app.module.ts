@@ -15,8 +15,9 @@ import { ShowListComponent } from "./components/show-list/show-list.component";
 import { ShowAddComponent } from "./components/show-add/show-add.component";
 import { ShowViewComponent } from "./components/show-view/show-view.component";
 import { ShowEditComponent } from "./components/show-edit/show-edit.component";
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from "./components/header/header.component";
+import { FooterComponent } from "./components/footer/footer.component";
+import { ResaComponent } from "./components/resa/resa.component";
 
 @NgModule({
   declarations: [
@@ -32,9 +33,10 @@ import { FooterComponent } from './components/footer/footer.component';
     ShowViewComponent,
     ShowEditComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ResaComponent
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })

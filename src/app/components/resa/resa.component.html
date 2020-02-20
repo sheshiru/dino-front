@@ -1,0 +1,102 @@
+<!-- <h1>Réservation {{show.tile}} </h1> -->
+
+<p>
+  Text explicatif sur la nécessité de renseigner son tel, Text explicatif sur la
+  nécessité de renseigner son tel Text explicatif sur la nécessité de renseigner
+  son tel Text explicatif sur la nécessité de renseigner son tel Text explicatif
+  sur la nécessité de renseigner son tel
+</p>
+
+<h1>Réservation spectacle 1</h1>
+<form action="" method="POST" id="resa_form">
+  <table id="resa" class="table table-hover ">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Catégorie</th>
+        <th scope="col">Prix/personne</th>
+        <th scope="col">Places</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Adultes</th>
+        <td>{{ adultPrice }}€</td>
+        <td>
+          <input
+            type="number"
+            name="nbadult"
+            min="0"
+            max="18"
+            [(ngModel)]="nbadult"
+          />
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">Enfants (max 12 ans)</th>
+        <td>{{ childPrice }}€</td>
+        <td>
+          <input
+            type="number"
+            name="nbchild"
+            min="0"
+            max="18"
+            [(ngModel)]="nbchild"
+          />
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" colspan="2">Total</th>
+        <td class="sum">{{ totalPrice() }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table id="email" class="table table-hover ">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Entrer email"
+            required
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            >Vos données ne seront jamais partagées.</small
+          >
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table id="tel" class="table table-hover ">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Téléphone portable</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <input
+            type="number"
+            name="tel"
+            class="form-control"
+            placeholder="Entrer votre numéro de portable"
+            required
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <input type="submit" value="Réserver" class="btn btn-primary" />
+</form>

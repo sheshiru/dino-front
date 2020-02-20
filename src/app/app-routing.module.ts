@@ -12,8 +12,15 @@ import { ShowListComponent } from "./components/show-list/show-list.component";
 import { ShowAddComponent } from "./components/show-add/show-add.component";
 import { ShowViewComponent } from "./components/show-view/show-view.component";
 import { ShowEditComponent } from "./components/show-edit/show-edit.component";
+import { ResaComponent } from "./components/resa/resa.component";
 
-const routes: Routes = [{ path: "users", component: UserListComponent }];
+const routes: Routes = [
+  { path: "users", component: UserListComponent },
+  {
+    path: "resa",
+    component: ResaComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
