@@ -24,7 +24,6 @@ const routes: Routes = [
   { path: "home", component: HomeComponent },
   { path: "resa", component: ResaComponent },
   {
-<<<<<<< HEAD
     path: "resa",
     component: ResaComponent
   },
@@ -33,12 +32,8 @@ const routes: Routes = [
   //   { path: "", component: ShowListComponent },
   //   { path: "show/:id", component: ShowViewComponent }
   // ]}
-  { path: "admin", component: ShowListComponent }
-=======
-    path: "details",
-    component: DetailsComponent
-  }
->>>>>>> dev-details
+  { path: "admin", component: ShowListComponent },
+  { path: "details", component: DetailsComponent }
 ];
 
 @NgModule({
