@@ -15,8 +15,12 @@ import { ShowListComponent } from "./components/show-list/show-list.component";
 import { ShowAddComponent } from "./components/show-add/show-add.component";
 import { ShowViewComponent } from "./components/show-view/show-view.component";
 import { ShowEditComponent } from "./components/show-edit/show-edit.component";
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { FooterComponent } from './components/pages/footer/footer.component';
+import { NavbarComponent } from './components/pages/navbar/navbar.component';
+import { LiveShowComponent } from './components/pages/live-show/live-show.component';
+import { HomeComponent } from './components/pages/home/home.component';
+import { SlidesComponent } from './components/pages/home/slides/slides.component';
+import { ContactComponent } from './components/pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -31,8 +35,12 @@ import { FooterComponent } from './components/footer/footer.component';
     ShowAddComponent,
     ShowViewComponent,
     ShowEditComponent,
-    HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    NavbarComponent,
+    LiveShowComponent,
+    HomeComponent,
+    SlidesComponent,
+    ContactComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
