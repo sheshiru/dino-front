@@ -13,15 +13,18 @@ import { ShowAddComponent } from "./components/show-add/show-add.component";
 import { ShowViewComponent } from "./components/show-view/show-view.component";
 import { ShowEditComponent } from "./components/show-edit/show-edit.component";
 import { NavbarComponent } from "./components/pages/navbar/navbar.component";
-import { FooterComponent } from './components/pages/footer/footer.component';
-import { LiveShowComponent } from './components/pages/live-show/live-show.component';
-import { HomeComponent } from './components/pages/home/home.component';
-
+import { FooterComponent } from "./components/pages/footer/footer.component";
+import { LiveShowComponent } from "./components/pages/live-show/live-show.component";
+import { HomeComponent } from "./components/pages/home/home.component";
+import { ResaComponent } from "./components/resa/resa.component";
 
 const routes: Routes = [
   { path: "users", component: UserListComponent },
-  { path: "home", component: HomeComponent }
-
+  { path: "home", component: HomeComponent },
+  {
+    path: "resa",
+    component: ResaComponent
+  }
 ];
 
 @NgModule({
