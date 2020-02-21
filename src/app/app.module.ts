@@ -47,19 +47,14 @@ import { DetailsComponent } from "./components/pages/details/details.component";
     ResaComponent,
     DetailsComponent
   ],
-<<<<<<< HEAD
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule,FormsModule],
-  providers: [],
-=======
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule
+    ReactiveFormsModule
   ],
   providers: [Validators],
->>>>>>> dev-details
   bootstrap: [AppComponent]
 })
 export class AppModule {}
