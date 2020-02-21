@@ -16,12 +16,15 @@ import { NavbarComponent } from "./components/pages/navbar/navbar.component";
 import { FooterComponent } from "./components/pages/footer/footer.component";
 import { LiveShowComponent } from "./components/pages/live-show/live-show.component";
 import { HomeComponent } from "./components/pages/home/home.component";
-import { ResaComponent } from "./components/resa/resa.component";
+import { ResaComponent } from "./components/pages/resa/resa.component";
+import { DetailsComponent } from "./components/pages/details/details.component";
 
 const routes: Routes = [
   { path: "users", component: UserListComponent },
   { path: "home", component: HomeComponent },
+  { path: "resa", component: ResaComponent },
   {
+<<<<<<< HEAD
     path: "resa",
     component: ResaComponent
   },
@@ -31,6 +34,11 @@ const routes: Routes = [
   //   { path: "show/:id", component: ShowViewComponent }
   // ]}
   { path: "admin", component: ShowListComponent }
+=======
+    path: "details",
+    component: DetailsComponent
+  }
+>>>>>>> dev-details
 ];
 
 @NgModule({
