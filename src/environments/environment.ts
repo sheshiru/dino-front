@@ -6,6 +6,15 @@ export const environment = {
   production: false
 };
 
+const host = 'http://localhost:8080/';
+
+export const userUrl = {
+  users: host + 'users',
+};
+export const showUrl = {
+  shows: host + 'shows',
+};
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
