@@ -1,0 +1,108 @@
+<!-- <h1>Réservation {{show.tile}} </h1> -->
+<div class="container-fluid">
+  <section id="section_resa">
+    <h1 class="title-resa">Title Reservation page</h1>
+    <p>
+      Text explicatif sur la nécessité de renseigner son tel, Text explicatif
+      sur la nécessité de renseigner son tel Text explicatif sur la nécessité de
+      renseigner son tel Text explicatif sur la nécessité de renseigner son tel
+      Text explicatif sur la nécessité de renseigner son tel. Lorem ipsum dolor
+      sit amet consectetur adipisicing elit. Exercitationem sapiente minima
+      consectetur inventore at repellendus beatae nihil accusantium nam et fugit
+      eaque, facilis hic tempora asperiores sit maiores repellat quae!
+    </p>
+
+    <h2>{{ show }}</h2>
+
+    <table id="resa" class="table table-hover ">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Catégorie</th>
+          <th scope="col">Prix/personne</th>
+          <th scope="col">Places</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"><label for="nbadult">Adultes</label></th>
+          <td>{{ adultPrice }}€</td>
+          <td>
+            <input
+              type="number"
+              id="nbadult"
+              name="nbadult"
+              min="0"
+              max="18"
+              [(ngModel)]="nbadult"
+            />
+          </td>
+        </tr>
+        <tr>
+          <th scope="row"><label for="nbchild">Enfants (max 12 ans)</label></th>
+          <td>{{ childPrice }}€</td>
+          <td>
+            <input
+              type="number"
+              id="nbchild"
+              name="nbchild"
+              min="0"
+              max="18"
+              [(ngModel)]="nbchild"
+            />
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" colspan="2">Total</th>
+          <td class="sum">{{ totalPrice() }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <form
+      action=""
+      method="POST"
+      id="resa_form"
+      (ngSubmit)="onSubmit(f)"
+      #f="ngForm"
+    >
+      <div class="dark-bg"><label for="email">Email</label></div>
+      <input
+        id="email"
+        type="email"
+        name="email"
+        class="form-control"
+        aria-describedby="emailHelp"
+        placeholder="Entrer email"
+        ngModel
+        required
+      />
+      <small id="emailHelp" class="form-text text-muted"
+        >Vos données ne seront jamais partagées.</small
+      >
+      <div class="dark-bg">
+        <label for="tel" ng-controller="maxlengthh">Téléphone portable</label>
+      </div>
+      <input
+        type="number"
+        name="tel"
+        class="form-control"
+        placeholder="Entrer votre numéro de portable"
+        ngModel
+        required
+      />
+      <input
+        type="submit"
+        value="Réserver"
+        class="btn btn-resa"
+        [disabled]="f.invalid"
+      />
+      <div *ngIf="showMsg" else msgError>
+        <p class="msg-confirm">{{ msgConfirm }}</p>
+      </div>
+
+      <ng-template #msgError>
+        <p class="msg-confirm">{{ msgError }}</p></ng-template
+      >
+    </form>
+  </section>
+</div>

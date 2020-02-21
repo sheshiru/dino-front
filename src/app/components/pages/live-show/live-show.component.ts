@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
-  selector: 'app-live-show',
-  templateUrl: './live-show.component.html',
-  styleUrls: ['./live-show.component.scss']
+  selector: "app-live-show",
+  templateUrl: "./live-show.component.html",
+  styleUrls: ["./live-show.component.scss"]
 })
 export class LiveShowComponent implements OnInit {
+  @Input() collapse: string;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
+import { NgForm } from "@angular/forms";
 
 @Component({
   selector: "app-resa",
@@ -10,10 +11,16 @@ export class ResaComponent implements OnInit {
   nbadult: number;
   adultPrice: number = 20;
   childPrice: number = 12;
+  showMsg: boolean;
+  msgError: string = "Une erreur s'est produite, veuillez réessayer";
+  msgConfirm: string =
+    "Votre réservation a bien été prise en compte. Vous recevrez d'ici peu un mail d'informations importantes concernant l'acces au spectacle";
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.showMsg = false;
+  }
   totalPrice = () => {
     let sum: number;
 
@@ -27,5 +34,13 @@ export class ResaComponent implements OnInit {
       return null;
     }
     return `${sum}€`;
+  };
+
+  onSubmit = (form: NgForm) => {
+    const email = form.value["email"];
+    const tel = form.value["tel"];
+    console.log(email, tel);
+    this.showMsg = true;
+    form.reset();
   };
 }

@@ -1,0 +1,39 @@
+#section_resa {
+  width: 70vw;
+  margin: auto;
+  min-height: 100vh;
+  padding-bottom: 5%;
+}
+#resa_form {
+  width: 70vw;
+  margin: 30px auto;
+}
+.sum {
+  font-weight: bold;
+}
+.msg-confirm {
+  color: green;
+}
+.msg-error {
+  color: red;
+}
+.title-resa {
+  margin: 4% auto;
+}
+p {
+  margin-bottom: 4%;
+}
+
+#resa_form > input:nth-child(5),
+small {
+  margin-bottom: 30px;
+}
+.dark-bg {
+  padding: 1%;
+  background-color: #343a40;
+  color: #fbfbfb;
+}
+.btn-resa {
+  background-color: orangered;
+  color: antiquewhite;
+}

@@ -16,14 +16,16 @@ import { NavbarComponent } from "./components/pages/navbar/navbar.component";
 import { FooterComponent } from "./components/pages/footer/footer.component";
 import { LiveShowComponent } from "./components/pages/live-show/live-show.component";
 import { HomeComponent } from "./components/pages/home/home.component";
-import { ResaComponent } from "./components/resa/resa.component";
+import { ResaComponent } from "./components/pages/resa/resa.component";
+import { DetailsComponent } from "./components/pages/details/details.component";
 
 const routes: Routes = [
   { path: "users", component: UserListComponent },
   { path: "home", component: HomeComponent },
+  { path: "resa", component: ResaComponent },
   {
-    path: "resa",
-    component: ResaComponent
+    path: "details",
+    component: DetailsComponent
   }
 ];
 

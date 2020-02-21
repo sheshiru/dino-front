@@ -1,7 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule, Validators } from "@angular/forms";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -21,7 +21,8 @@ import { LiveShowComponent } from "./components/pages/live-show/live-show.compon
 import { HomeComponent } from "./components/pages/home/home.component";
 import { SlidesComponent } from "./components/pages/home/slides/slides.component";
 import { ContactComponent } from "./components/pages/contact/contact.component";
-import { ResaComponent } from "./components/resa/resa.component";
+import { ResaComponent } from "./components/pages/resa/resa.component";
+import { DetailsComponent } from "./components/pages/details/details.component";
 
 @NgModule({
   declarations: [
@@ -43,10 +44,17 @@ import { ResaComponent } from "./components/resa/resa.component";
     SlidesComponent,
     ContactComponent,
     FooterComponent,
-    ResaComponent
+    ResaComponent,
+    DetailsComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
+  ],
+  providers: [Validators],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
