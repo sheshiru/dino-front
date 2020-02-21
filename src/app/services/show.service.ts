@@ -8,10 +8,10 @@ import { Show } from '../models/show.model';
 })
 export class ShowService {
 
+  shows;
   constructor(private http: HttpClient) {
     this.getShows;
   }
-  shows;
   getShows() {
     return this.http.get(showUrl.shows);
   }

@@ -25,11 +25,12 @@ const routes: Routes = [
     path: "resa",
     component: ResaComponent
   },
-  { path: "admin",
-  children: [
-    { path: "", component: ShowListComponent },
-    { path: "shows:id", component: ShowViewComponent }
-  ]}
+  // { path: "admin",
+  // children: [
+  //   { path: "", component: ShowListComponent },
+  //   { path: "show/:id", component: ShowViewComponent }
+  // ]}
+  { path: "admin", component: ShowListComponent }
 ];
 
 @NgModule({
