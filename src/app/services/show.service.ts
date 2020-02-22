@@ -1,13 +1,12 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { showUrl } from 'src/environments/environment';
-import { Show } from '../models/show.model';
+import { showUrl } from "src/environments/environment";
+import { Show } from "../models/show.model";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class ShowService {
-
   shows;
   constructor(private http: HttpClient) {
     this.getShows;
@@ -15,4 +14,7 @@ export class ShowService {
   getShows() {
     return this.http.get(showUrl.shows);
   }
+  getOneShow = id => {
+    return this.http.get(`${showUrl.shows}/${id}`);
+  };
 }

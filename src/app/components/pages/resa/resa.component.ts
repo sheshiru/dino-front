@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { NgForm } from "@angular/forms";
+import { ShowService } from "src/app/services/show.service";
 
 @Component({
   selector: "app-resa",
@@ -15,11 +16,14 @@ export class ResaComponent implements OnInit {
   msgError: string = "Une erreur s'est produite, veuillez réessayer";
   msgConfirm: string =
     "Votre réservation a bien été prise en compte. Vous recevrez d'ici peu un mail d'informations importantes concernant l'acces au spectacle";
-
-  constructor() {}
-
+  constructor(private showService: ShowService) {}
+  show;
   ngOnInit() {
     this.showMsg = false;
+    this.showService.getOneShow("5e4fd8760ba4c85173c35700").subscribe(data => {
+      this.show = data;
+      console.log(this.show);
+    });
   }
   totalPrice = () => {
     let sum: number;

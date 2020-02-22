@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { ShowService } from "src/app/services/show.service";
 
 @Component({
   selector: "app-details",
@@ -7,9 +8,13 @@ import { Component, OnInit } from "@angular/core";
 })
 export class DetailsComponent implements OnInit {
   collapse: string;
-  constructor() {}
+  show;
+  constructor(private showService: ShowService) {}
 
   ngOnInit() {
     this.collapse = "collapse";
+    this.showService.getShows().subscribe(data => {
+      this.show = data;
+    });
   }
 }
