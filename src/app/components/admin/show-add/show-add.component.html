@@ -1,1 +1,61 @@
-<p>show-add works!</p>
+<section>
+  <form (submit)="addShow()" id="add_show_form" class="form-group">
+    <h1 class="dark-bg">Create show</h1>
+    <label for="title">Title</label>
+    <input
+      [(ngModel)]="title"
+      id="title"
+      type="text"
+      name="title"
+      placeholder="title"
+      class="form-control"
+      value="coucou"
+    />
+    <label for="duration">Duration</label>
+    <input
+      [(ngModel)]="duration"
+      id="duration"
+      type="number"
+      name="duration"
+      placeholder="duration"
+      class="form-control"
+      value="500"
+    />
+    <label for="place">Place</label>
+    <input
+      type="text"
+      id="place"
+      name="place"
+      class="form-control"
+      value="aix en provence"
+    />
+    <label for="pictures">Picture</label>
+    <input
+      [(ngModel)]="pictures"
+      id="pictures"
+      type="image"
+      name="pictures"
+      class="form-control"
+    />
+    <label for="descriptions">Description</label>
+    <input
+      type="text"
+      id="descriptions"
+      name="descriptions"
+      class="form-control"
+      value="heyhey"
+    />
+    <label for="price">Price</label>
+    <input
+      type="number"
+      id="price"
+      name="price"
+      class="form-control"
+      value="50"
+    />
+    <label for="dates">Dates</label>
+    <input type="date" id="dates" name="dates" class="form-control" />
+
+    <input type="submit" value="Envoyer" />
+  </form>
+</section>

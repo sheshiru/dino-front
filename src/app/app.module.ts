@@ -23,6 +23,7 @@ import { SlidesComponent } from "./components/pages/home/slides/slides.component
 import { ContactComponent } from "./components/pages/contact/contact.component";
 import { ResaComponent } from "./components/pages/resa/resa.component";
 import { DetailsComponent } from "./components/pages/details/details.component";
+import { CalendarComponent } from "./components/pages/calendar/calendar.component";
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { DetailsComponent } from "./components/pages/details/details.component";
     ContactComponent,
     FooterComponent,
     ResaComponent,
-    DetailsComponent
+    DetailsComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
