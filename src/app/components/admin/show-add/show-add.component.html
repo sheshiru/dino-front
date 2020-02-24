@@ -1,5 +1,5 @@
 <section>
-  <form (submit)="addShow()" id="add_show_form" class="form-group">
+  <form (submit)="addShow($event)" id="add_show_form" class="form-group">
     <h1 class="dark-bg">Create show</h1>
     <label for="title">Title</label>
     <input
@@ -9,7 +9,6 @@
       name="title"
       placeholder="title"
       class="form-control"
-      value="coucou"
     />
     <label for="duration">Duration</label>
     <input
@@ -19,15 +18,14 @@
       name="duration"
       placeholder="duration"
       class="form-control"
-      value="500"
     />
     <label for="place">Place</label>
     <input
+      [(ngModel)]="place"
       type="text"
       id="place"
       name="place"
       class="form-control"
-      value="aix en provence"
     />
     <label for="pictures">Picture</label>
     <input
@@ -39,23 +37,29 @@
     />
     <label for="descriptions">Description</label>
     <input
+      [(ngModel)]="descriptions"
       type="text"
       id="descriptions"
       name="descriptions"
       class="form-control"
-      value="heyhey"
     />
     <label for="price">Price</label>
     <input
+      [(ngModel)]="price"
       type="number"
       id="price"
       name="price"
       class="form-control"
-      value="50"
     />
     <label for="dates">Dates</label>
-    <input type="date" id="dates" name="dates" class="form-control" />
+    <input
+      [(ngModel)]="dates"
+      type="date"
+      id="dates"
+      name="dates"
+      class="form-control"
+    />
 
-    <input type="submit" value="Envoyer" />
+    <input type="submit" value="Ajouter un show" />
   </form>
 </section>

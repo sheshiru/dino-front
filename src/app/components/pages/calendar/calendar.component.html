@@ -1,1 +1,38 @@
-<p>calendar works!</p>
+<h1>Calendrier des spectacles</h1>
+
+<div *ngFor="let show of shows">
+  <div id="accordion">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="mb-0">
+          <button
+            class="btn btn-link"
+            data-toggle="collapse"
+            [attr.data-target]="'#collapse' + show._id"
+            aria-expanded="true"
+            [attr.aria-controls]="'collapse' + show._id"
+          >
+            {{ show.title }}
+          </button>
+          <button routerLink="show/{{ show._id }}">
+            Réserver
+          </button>
+        </h5>
+      </div>
+
+      <div
+        [id]="'collapse' + show._id"
+        class="collapse"
+        data-parent="#accordion"
+      >
+        <div class="card-body">
+          {{ show.descriptions }}
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque, porro
+          nostrum iure modi non omnis ad veniam totam nobis reprehenderit eum!
+          Aperiam dignissimos deserunt dolore, earum corporis dolor mollitia
+          rem?
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -10,11 +10,11 @@ export class Show {
   constructor(
     ti: string,
     du: number,
-    pl: [] = [],
+    pl: string[] = [],
     pi: string[] = [],
     de: string[] = [],
-    pr: number[],
-    da: Date[]
+    pr: number[] = [],
+    da: Date[] = []
   ) {
     this.title = ti;
     this.duration = du;
