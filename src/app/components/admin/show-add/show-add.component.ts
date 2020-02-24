@@ -31,5 +31,6 @@ export class ShowAddComponent implements OnInit {
       this.dates
     );
     this.showService.createShow(this.show);
+    console.log("hey", this.show);
   };
 }
