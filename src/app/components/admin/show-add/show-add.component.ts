@@ -9,6 +9,7 @@ import { Show } from "src/app/models/show.model";
 })
 export class ShowAddComponent implements OnInit {
   title: string;
+  active: boolean;
   duration: number;
   place;
   pictures;
@@ -23,6 +24,7 @@ export class ShowAddComponent implements OnInit {
     evt.preventDefault();
     this.show = new Show(
       this.title,
+      this.active,
       this.duration,
       this.place,
       this.pictures,
