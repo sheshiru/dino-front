@@ -13,42 +13,28 @@ import { ShowAddComponent } from "./components/admin/show-add/show-add.component
 import { ShowViewComponent } from "./components/admin/show-view/show-view.component";
 import { ShowEditComponent } from "./components/admin/show-edit/show-edit.component";
 import { NavbarComponent } from "./components/pages/navbar/navbar.component";
-<<<<<<< HEAD
 import { FooterComponent } from "./components/pages/footer/footer.component";
 import { LiveShowComponent } from "./components/pages/live-show/live-show.component";
 import { HomeComponent } from "./components/pages/home/home.component";
 import { ResaComponent } from "./components/pages/resa/resa.component";
 import { DetailsComponent } from "./components/pages/details/details.component";
-=======
-import { FooterComponent } from './components/pages/footer/footer.component';
-import { LiveShowComponent } from './components/pages/live-show/live-show.component';
-import { HomeComponent } from './components/pages/home/home.component';
-import { ContactComponent } from './components/pages/contact/contact.component';
-
->>>>>>> dev-front-contact
 
 const routes: Routes = [
   { path: "users", component: UserListComponent },
   { path: "home", component: HomeComponent },
-<<<<<<< HEAD
   { path: "resa", component: ResaComponent },
-  {
-    path: "resa",
-    component: ResaComponent
-  },
   // { path: "admin",
   // children: [
   //   { path: "", component: ShowListComponent },
   //   { path: "show/:id", component: ShowViewComponent }
   // ]}
-  { path: "admin", component: ShowListComponent },
-  { path: "details", component: DetailsComponent }
-=======
-  { path: "", component: HomeComponent },
-  { path: "contact", component: ContactComponent }
-
-
->>>>>>> dev-front-contact
+  { path: "resa", component: ResaComponent},
+  { path: "admin",
+  children: [
+    { path: "", component: ShowListComponent },
+    { path: "shows", component: ShowListComponent },
+    { path: "shows/:id", component: ShowViewComponent }
+  ]}
 ];
 
 @NgModule({
