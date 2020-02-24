@@ -22,7 +22,6 @@ export class ResaComponent implements OnInit {
     this.showMsg = false;
     this.showService.getOneShow("5e4fd8760ba4c85173c35700").subscribe(data => {
       this.show = data;
-      console.log(this.show);
     });
   }
   totalPrice = () => {

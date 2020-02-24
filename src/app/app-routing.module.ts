@@ -12,29 +12,47 @@ import { ShowListComponent } from "./components/admin/show-list/show-list.compon
 import { ShowAddComponent } from "./components/admin/show-add/show-add.component";
 import { ShowViewComponent } from "./components/admin/show-view/show-view.component";
 import { ShowEditComponent } from "./components/admin/show-edit/show-edit.component";
-import { NavbarComponent } from "./components/pages/navbar/navbar.component";
-import { FooterComponent } from "./components/pages/footer/footer.component";
-import { LiveShowComponent } from "./components/pages/live-show/live-show.component";
 import { HomeComponent } from "./components/pages/home/home.component";
 import { ResaComponent } from "./components/pages/resa/resa.component";
 import { DetailsComponent } from "./components/pages/details/details.component";
+import { ContactComponent } from "./components/pages/contact/contact.component";
+import { CalendarComponent } from "./components/pages/calendar/calendar.component";
 
 const routes: Routes = [
-  { path: "users", component: UserListComponent },
+  { path: "", component: HomeComponent },
   { path: "home", component: HomeComponent },
+  { path: "contact", component: ContactComponent },
   { path: "resa", component: ResaComponent },
-  // { path: "admin",
-  // children: [
-  //   { path: "", component: ShowListComponent },
-  //   { path: "show/:id", component: ShowViewComponent }
-  // ]}
-  { path: "resa", component: ResaComponent},
-  { path: "admin",
-  children: [
-    { path: "", component: ShowListComponent },
-    { path: "shows", component: ShowListComponent },
-    { path: "shows/:id", component: ShowViewComponent }
-  ]}
+  { path: "details", component: DetailsComponent },
+  { path: "calendar", component: CalendarComponent },
+  {
+    path: "admin",
+    children: [
+      { path: "", component: ShowListComponent },
+      {
+        path: "show-add",
+        component: ShowAddComponent
+      },
+      {
+        path: "show-add",
+        component: ShowEditComponent
+      },
+      {
+        path: "show-edit",
+        component: ShowAddComponent
+      },
+      { path: "show/:id", component: ShowViewComponent },
+      {
+        path: "show-delete",
+        component: ShowDeleteComponent
+      },
+      { path: "user-list", component: UserListComponent },
+      { path: "user-add", component: UserAddComponent },
+      { path: "user-edit", component: UserEditComponent },
+      { path: "user/:id", component: UserViewComponent },
+      { path: "user-delete", component: UserDeleteComponent }
+    ]
+  }
 ];
 
 @NgModule({
