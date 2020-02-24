@@ -24,6 +24,7 @@ import { ContactComponent } from "./components/pages/contact/contact.component";
 import { ResaComponent } from "./components/pages/resa/resa.component";
 import { DetailsComponent } from "./components/pages/details/details.component";
 import { CalendarComponent } from "./components/pages/calendar/calendar.component";
+import { ShowAddDateComponent } from './components/show-add-date/show-add-date.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { CalendarComponent } from "./components/pages/calendar/calendar.componen
     FooterComponent,
     ResaComponent,
     DetailsComponent,
-    CalendarComponent
+    CalendarComponent,
+    ShowAddDateComponent
   ],
   imports: [
     BrowserModule,

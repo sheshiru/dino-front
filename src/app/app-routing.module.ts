@@ -17,6 +17,7 @@ import { ResaComponent } from "./components/pages/resa/resa.component";
 import { DetailsComponent } from "./components/pages/details/details.component";
 import { ContactComponent } from "./components/pages/contact/contact.component";
 import { CalendarComponent } from "./components/pages/calendar/calendar.component";
+import { ShowAddDateComponent } from './components/admin/show-add-date/show-add-date.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -34,8 +35,8 @@ const routes: Routes = [
         component: ShowAddComponent
       },
       {
-        path: "show-add",
-        component: ShowEditComponent
+        path: "show-add-date",
+        component: ShowAddDateComponent
       },
       {
         path: "show-edit",
