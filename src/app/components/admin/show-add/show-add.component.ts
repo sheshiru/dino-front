@@ -11,11 +11,11 @@ export class ShowAddComponent implements OnInit {
   title: string;
   active: boolean;
   duration: number;
-  place;
-  pictures;
-  descriptions;
-  price;
-  dates;
+  place: string[];
+  pictures: string[];
+  descriptions: string[];
+  price: number[];
+  dates: Date[];
   show: Show;
   constructor(private showService: ShowService) {}
 
@@ -33,6 +33,12 @@ export class ShowAddComponent implements OnInit {
       this.dates
     );
     this.showService.createShow(this.show);
-    console.log("hey", this.show);
+    {
+      try {
+        console.log(this.show);
+      } catch (error) {
+        console.log(error);
+      }
+    }
   };
 }

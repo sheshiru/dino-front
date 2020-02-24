@@ -12,11 +12,11 @@ export class Show {
     ti: string,
     ac: boolean = true,
     du: number,
-    pl: [] = [],
+    pl: string[] = [],
     pi: string[] = [],
     de: string[] = [],
-    pr: number[],
-    da: Date[]
+    pr: number[] = [],
+    da: Date[] = []
   ) {
     this.title = ti;
     this.active = ac;
