@@ -15,4 +15,8 @@ export class ShowService {
   getShows() {
     return this.http.get(showUrl.shows);
   }
+  getShowById(id) {
+    return this.http.get(showUrl.shows + "/" + id);
+  }
+
 }
