@@ -20,4 +20,7 @@ export class ShowService {
   createShow(show) {
     return this.http.post<Show>(showUrl.shows, show).subscribe();
   }
+  updateShow(show){
+    return this.http.patch<Show>(showUrl.shows + "/" + show._id, show).subscribe();
+  }
 }

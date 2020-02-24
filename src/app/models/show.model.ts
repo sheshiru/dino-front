@@ -1,5 +1,6 @@
 export class Show {
   title: String;
+  active: Boolean;
   duration: Number;
   place: String[];
   pictures: String[];
@@ -9,6 +10,7 @@ export class Show {
 
   constructor(
     ti: string,
+    ac: boolean = true,
     du: number,
     pl: [] = [],
     pi: string[] = [],
@@ -17,6 +19,7 @@ export class Show {
     da: Date[]
   ) {
     this.title = ti;
+    this.active = ac;
     this.duration = du;
     this.place = pl;
     this.pictures = pi;

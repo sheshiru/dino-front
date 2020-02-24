@@ -8,7 +8,17 @@ import { ActivatedRoute, ParamMap } from "@angular/router";
   styleUrls: ["./show-view.component.scss"]
 })
 export class ShowViewComponent implements OnInit {
+  
   show;
+  title: string;
+  active: boolean;
+  duration: number;
+  place;
+  pictures;
+  descriptions;
+  price;
+  dates;
+
   id: string;
   constructor(private sS: ShowService, private route: ActivatedRoute) {}
 
@@ -20,4 +30,7 @@ export class ShowViewComponent implements OnInit {
       });
     });
   }
+  submit() {
+    this.sS.updateShow(this.show);
+  };
 }
