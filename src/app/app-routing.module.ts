@@ -21,16 +21,13 @@ import { ResaComponent } from "./components/resa/resa.component";
 const routes: Routes = [
   { path: "users", component: UserListComponent },
   { path: "home", component: HomeComponent },
-  {
-    path: "resa",
-    component: ResaComponent
-  },
-  // { path: "admin",
-  // children: [
-  //   { path: "", component: ShowListComponent },
-  //   { path: "show/:id", component: ShowViewComponent }
-  // ]}
-  { path: "admin", component: ShowListComponent }
+  { path: "resa", component: ResaComponent},
+  { path: "admin",
+  children: [
+    { path: "", component: ShowListComponent },
+    { path: "shows", component: ShowListComponent },
+    { path: "shows/:id", component: ShowViewComponent }
+  ]}
 ];
 
 @NgModule({

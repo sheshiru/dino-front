@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ShowService } from 'src/app/services/show.service';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-show-view',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShowViewComponent implements OnInit {
 
-  constructor() { }
+  show;
+  id: string;
+  constructor(private sS: ShowService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.paramMap.subscribe((params: ParamMap) => {
+      this.id = params.get('id');
+      this.sS.getShowById(this.id).subscribe(data => {
+        this.show = data; 
+      })
+    })
   }
-
 }
