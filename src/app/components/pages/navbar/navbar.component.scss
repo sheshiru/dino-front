@@ -3,3 +3,29 @@
     padding-left:0;
     padding-right:0;
 }
+
+a.navbar-brand{
+    width: 130px;
+}
+a.navbar-brand img{
+    width:100%;
+}
+
+a.nav-link{
+    padding:0.5rem;
+    margin:0.2rem;
+    border:1px solid #343a40;
+    font-size:20px;
+}
+a.nav-link:hover{
+    color:#c94930;
+    border: 1px solid #c94930;
+}
+
+// div.container-fluid{
+//     position:relative;
+// }
+// div.row{
+//     position:absolute;
+//     bottom:0vh;
+// }

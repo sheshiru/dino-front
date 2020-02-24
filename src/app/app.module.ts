@@ -54,7 +54,17 @@ import { DetailsComponent } from "./components/pages/details/details.component";
     FormsModule,
     ReactiveFormsModule
   ],
+<<<<<<< HEAD
   providers: [Validators],
+=======
+  imports: [
+    BrowserModule, 
+    FormsModule, 
+    AppRoutingModule, 
+    HttpClientModule
+  ],
+  providers: [],
+>>>>>>> dev-front-contact
   bootstrap: [AppComponent]
 })
 export class AppModule {}
