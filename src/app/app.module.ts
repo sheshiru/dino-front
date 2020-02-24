@@ -42,7 +42,12 @@ import { ContactComponent } from './components/pages/contact/contact.component';
     SlidesComponent,
     ContactComponent
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule, 
+    FormsModule, 
+    AppRoutingModule, 
+    HttpClientModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -16,11 +16,15 @@ import { NavbarComponent } from "./components/pages/navbar/navbar.component";
 import { FooterComponent } from './components/pages/footer/footer.component';
 import { LiveShowComponent } from './components/pages/live-show/live-show.component';
 import { HomeComponent } from './components/pages/home/home.component';
+import { ContactComponent } from './components/pages/contact/contact.component';
 
 
 const routes: Routes = [
   { path: "users", component: UserListComponent },
-  { path: "home", component: HomeComponent }
+  { path: "home", component: HomeComponent },
+  { path: "", component: HomeComponent },
+  { path: "contact", component: ContactComponent }
+
 
 ];
 
