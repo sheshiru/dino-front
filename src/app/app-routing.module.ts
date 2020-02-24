@@ -12,12 +12,16 @@ import { ShowListComponent } from "./components/admin/show-list/show-list.compon
 import { ShowAddComponent } from "./components/admin/show-add/show-add.component";
 import { ShowViewComponent } from "./components/admin/show-view/show-view.component";
 import { ShowEditComponent } from "./components/admin/show-edit/show-edit.component";
-import { HomeComponent } from "./components/pages/home/home.component";
-import { ResaComponent } from "./components/pages/resa/resa.component";
-import { DetailsComponent } from "./components/pages/details/details.component";
-import { ContactComponent } from "./components/pages/contact/contact.component";
 import { CalendarComponent } from "./components/pages/calendar/calendar.component";
 import { ShowAddDateComponent } from "./components/admin/show-add-date/show-add-date.component";
+import { NavbarComponent } from "./components/pages/navbar/navbar.component";
+import { FooterComponent } from "./components/pages/footer/footer.component";
+import { ResaComponent } from "./components/pages/resa/resa.component";
+import { DetailsComponent } from "./components/pages/details/details.component";
+import { LiveShowComponent } from './components/pages/live-show/live-show.component';
+import { HomeComponent } from './components/pages/home/home.component';
+import { ContactComponent } from './components/pages/contact/contact.component';
+
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
