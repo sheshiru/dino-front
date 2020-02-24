@@ -17,4 +17,7 @@ export class ShowService {
   getOneShow = id => {
     return this.http.get(`${showUrl.shows}/${id}`);
   };
+  createShow(show) {
+    return this.http.post<Show>(showUrl.shows, show).subscribe();
+  }
 }

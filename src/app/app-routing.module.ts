@@ -16,12 +16,43 @@ import { HomeComponent } from "./components/pages/home/home.component";
 import { ResaComponent } from "./components/pages/resa/resa.component";
 import { DetailsComponent } from "./components/pages/details/details.component";
 import { ContactComponent } from "./components/pages/contact/contact.component";
+import { CalendarComponent } from "./components/pages/calendar/calendar.component";
 
 const routes: Routes = [
-  { path: "users", component: UserListComponent },
-  { path: "home", component: HomeComponent },
   { path: "", component: HomeComponent },
-  { path: "contact", component: ContactComponent }
+  { path: "home", component: HomeComponent },
+  { path: "contact", component: ContactComponent },
+  { path: "resa", component: ResaComponent },
+  { path: "details", component: DetailsComponent },
+  { path: "calendar", component: CalendarComponent },
+  {
+    path: "admin",
+    children: [
+      { path: "", component: ShowListComponent },
+      {
+        path: "show-add",
+        component: ShowAddComponent
+      },
+      {
+        path: "show-add",
+        component: ShowEditComponent
+      },
+      {
+        path: "show-edit",
+        component: ShowAddComponent
+      },
+      { path: "show/:id", component: ShowViewComponent },
+      {
+        path: "show-delete",
+        component: ShowDeleteComponent
+      },
+      { path: "user-list", component: UserListComponent },
+      { path: "user-add", component: UserAddComponent },
+      { path: "user-edit", component: UserEditComponent },
+      { path: "user/:id", component: UserViewComponent },
+      { path: "user-delete", component: UserDeleteComponent }
+    ]
+  }
 ];
 
 @NgModule({
