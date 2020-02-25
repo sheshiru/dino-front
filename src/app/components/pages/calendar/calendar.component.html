@@ -14,7 +14,8 @@
           >
             {{ show.title }}
           </button>
-          <button routerLink="show/{{ show._id }}">
+
+          <button [routerLink]="['/resa', show._id]">
             Réserver
           </button>
         </h5>

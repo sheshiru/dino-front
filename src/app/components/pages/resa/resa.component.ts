@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { NgForm } from "@angular/forms";
 import { ShowService } from "src/app/services/show.service";
+import { ActivatedRoute, ParamMap } from "@angular/router";
 
 @Component({
   selector: "app-resa",
@@ -8,6 +9,7 @@ import { ShowService } from "src/app/services/show.service";
   styleUrls: ["./resa.component.scss"]
 })
 export class ResaComponent implements OnInit {
+  show;
   nbchild: number;
   nbadult: number;
   adultPrice: number = 20;
@@ -16,14 +18,24 @@ export class ResaComponent implements OnInit {
   msgError: string = "Une erreur s'est produite, veuillez réessayer";
   msgConfirm: string =
     "Votre réservation a bien été prise en compte. Vous recevrez d'ici peu un mail d'informations importantes concernant l'acces au spectacle";
-  constructor(private showService: ShowService) {}
-  show;
+  constructor(
+    private showService: ShowService,
+    private route: ActivatedRoute
+  ) {}
+
   ngOnInit() {
     this.showMsg = false;
-    this.showService.getOneShow("5e4fd8760ba4c85173c35700").subscribe(data => {
-      this.show = data;
+    this.route.paramMap.subscribe((params: ParamMap) => {
+      // paramMap est un observable
+      let id = params.get("id"); // recupere l'id de mon url
+      this.showService.getOneShow(id).subscribe(this.populateShow);
     });
   }
+  //fonction callback
+  populateShow = data => {
+    this.show = data;
+  };
+
   totalPrice = () => {
     let sum: number;
 

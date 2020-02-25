@@ -17,14 +17,26 @@ import { ResaComponent } from "./components/pages/resa/resa.component";
 import { DetailsComponent } from "./components/pages/details/details.component";
 import { ContactComponent } from "./components/pages/contact/contact.component";
 import { CalendarComponent } from "./components/pages/calendar/calendar.component";
-import { ShowAddDateComponent } from './components/admin/show-add-date/show-add-date.component';
+import { ShowAddDateComponent } from "./components/admin/show-add-date/show-add-date.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "home", component: HomeComponent },
   { path: "contact", component: ContactComponent },
-  { path: "resa", component: ResaComponent },
-  { path: "details", component: DetailsComponent },
+  {
+    path: "resa",
+    children: [
+      { path: "", redirectTo: "/", pathMatch: "full" },
+      { path: ":id", component: ResaComponent }
+    ]
+  },
+  {
+    path: "details",
+    children: [
+      { path: "", redirectTo: "/", pathMatch: "full" },
+      { path: ":id", component: DetailsComponent }
+    ]
+  },
   { path: "calendar", component: CalendarComponent },
   {
     path: "admin",

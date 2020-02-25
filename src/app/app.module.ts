@@ -2,6 +2,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule, ReactiveFormsModule, Validators } from "@angular/forms";
+import { MDBBootstrapModule } from "angular-bootstrap-md";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -24,7 +25,7 @@ import { ContactComponent } from "./components/pages/contact/contact.component";
 import { ResaComponent } from "./components/pages/resa/resa.component";
 import { DetailsComponent } from "./components/pages/details/details.component";
 import { CalendarComponent } from "./components/pages/calendar/calendar.component";
-import { ShowAddDateComponent } from './components/show-add-date/show-add-date.component';
+import { ShowAddDateComponent } from "./components/admin/show-add-date/show-add-date.component";
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { ShowAddDateComponent } from './components/show-add-date/show-add-date.c
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [Validators],
   bootstrap: [AppComponent]

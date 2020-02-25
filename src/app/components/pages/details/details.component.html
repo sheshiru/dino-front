@@ -2,8 +2,10 @@
   <div class="details-wrapper">
     <section id="details_text">
       <h1>
-        {{ show[0]?.title }}
-        <button class="btn btn-resa  " [routerLink]="'/resa'">Réserver</button>
+        {{ show?.title }}
+        <button class="btn btn-resa " [routerLink]="['/resa', show._id]">
+          Réserver
+        </button>
       </h1>
 
       <p>

@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { ShowService } from "src/app/services/show.service";
 
 @Component({
-  selector: 'app-slides',
-  templateUrl: './slides.component.html',
-  styleUrls: ['./slides.component.scss']
+  selector: "app-slides",
+  templateUrl: "./slides.component.html",
+  styleUrls: ["./slides.component.scss"]
 })
 export class SlidesComponent implements OnInit {
-
-  constructor() { }
+  shows: object;
+  constructor(private showService: ShowService) {}
 
   ngOnInit() {
+    this.showService.getShows().subscribe(data => (this.shows = data));
   }
-
 }

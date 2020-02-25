@@ -1,9 +1,23 @@
-div.col{
-    box-sizing:border-box;
-    padding-left:0;
-    padding-right:0;
+div.col {
+  box-sizing: border-box;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-div.carousel-item img{
-    max-width:100%;
+div.carousel-item img {
+  max-width: 100%;
+}
+
+.relative {
+  max-height: 100vw;
+  width: 100vw;
+  position: relative;
+}
+.infos-container {
+  width: 100vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  display: inline;
 }

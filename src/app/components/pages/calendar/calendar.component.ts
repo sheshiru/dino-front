@@ -7,7 +7,7 @@ import { ShowService } from "src/app/services/show.service";
   styleUrls: ["./calendar.component.scss"]
 })
 export class CalendarComponent implements OnInit {
-  shows;
+  shows: object;
   constructor(private showService: ShowService) {}
 
   ngOnInit() {
