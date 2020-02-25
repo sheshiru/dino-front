@@ -17,7 +17,7 @@ export class ShowAddComponent implements OnInit {
   price: number[];
   dates: Date[];
   show: Show;
-  constructor(private showService: ShowService) {}
+  constructor(private sS: ShowService) {}
 
   ngOnInit() {}
   addShow = evt => {
@@ -32,7 +32,7 @@ export class ShowAddComponent implements OnInit {
       this.price,
       this.dates
     );
-    this.showService.createShow(this.show);
+    this.sS.createShow(this.show);
     {
       try {
         console.log(this.show);

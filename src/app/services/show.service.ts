@@ -8,19 +8,24 @@ import { Show } from "../models/show.model";
 })
 export class ShowService {
   shows;
+  meetUpDate: any;
   constructor(private http: HttpClient) {
     this.getShows;
   }
   getShows() {
     return this.http.get(showUrl.shows);
   }
-  getOneShow = id => {
+  getOneShow(id) {
     return this.http.get(`${showUrl.shows}/${id}`);
   };
   createShow(show) {
     return this.http.post<Show>(showUrl.shows, show).subscribe();
   }
-  updateShow(show){
+  updateShow(show) {
     return this.http.patch<Show>(showUrl.shows + "/" + show._id, show).subscribe();
+  }
+  addDate(show, ndate) {
+    const sdate = { date: ndate };
+    return this.http.patch<Show>(showUrl.shows + "/add-date/" + show._id, sdate).subscribe();
   }
 }
