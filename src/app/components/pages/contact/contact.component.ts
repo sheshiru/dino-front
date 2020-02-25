@@ -12,7 +12,7 @@ export class ContactComponent implements OnInit {
 
   name;
   email;
-  message;
+  text;
   
   constructor(private mail:MailService) { }
 
@@ -24,8 +24,9 @@ export class ContactComponent implements OnInit {
     const formData = {
       name: form.value["name"],
       email:form.value["email"],
-      message: form.value["message"]
+      text: form.value["text"]
     }
+    console.log(formData);
     this.mail.sendMail(formData);
   }
 }
