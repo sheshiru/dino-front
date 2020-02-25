@@ -14,10 +14,11 @@ div.carousel-item img {
   position: relative;
 }
 .infos-container {
-  width: 100vw;
   position: absolute;
   top: 50%;
   left: 50%;
-  display: flex;
   display: inline;
+}
+img {
+  max-height: 100vh;
 }

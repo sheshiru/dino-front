@@ -1,37 +1,47 @@
-<h1>Calendrier des spectacles</h1>
+<div id="big_wrapper">
+  <h1>Calendrier des spectacles</h1>
 
-<div *ngFor="let show of shows">
-  <div id="accordion">
-    <div class="card">
-      <div class="card-header">
-        <h5 class="mb-0">
-          <button
-            class="btn btn-link"
-            data-toggle="collapse"
-            [attr.data-target]="'#collapse' + show._id"
-            aria-expanded="true"
-            [attr.aria-controls]="'collapse' + show._id"
-          >
-            {{ show.title }}
-          </button>
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati neque
+    facere, quibusdam provident cum, tenetur dolores quaerat consequatur rem
+    aliquid et eaque, fugit earum ut dignissimos voluptas perferendis rerum
+    quasi. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+    enim a qui ratione, consequuntur molestias dolores. Fugiat explicabo enim,
+    cum quaerat tempora natus consequatur dicta pariatur. Corrupti veritatis
+    repudiandae minus.
+  </p>
 
-          <button [routerLink]="['/resa', show._id]">
-            Réserver
-          </button>
-        </h5>
-      </div>
+  <div *ngFor="let show of shows">
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="mb-0">
+            <div class="btn-container">
+              <button
+                class="btn btn-link"
+                data-toggle="collapse"
+                [attr.data-target]="'#collapse' + show._id"
+                aria-expanded="true"
+                [attr.aria-controls]="'collapse' + show._id"
+              >
+                {{ show.title }}
+              </button>
 
-      <div
-        [id]="'collapse' + show._id"
-        class="collapse"
-        data-parent="#accordion"
-      >
-        <div class="card-body">
-          {{ show.descriptions }}
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque, porro
-          nostrum iure modi non omnis ad veniam totam nobis reprehenderit eum!
-          Aperiam dignissimos deserunt dolore, earum corporis dolor mollitia
-          rem?
+              <button class="btn btn-resa" [routerLink]="['/resa', show._id]">
+                Réserver
+              </button>
+            </div>
+          </h5>
+        </div>
+
+        <div
+          [id]="'collapse' + show._id"
+          class="collapse"
+          data-parent="#accordion"
+        >
+          <div class="card-body">
+            {{ show.descriptions }}
+          </div>
         </div>
       </div>
     </div>

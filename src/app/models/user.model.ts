@@ -1,18 +1,24 @@
 export class User {
+  email: String;
+  phone: String;
+  username: String;
+  password: String;
+  firstName: String;
+  lastName: String;
 
-    username: String;
-    password: String;
-    email: String;
-    phone: String;
-    firstName: String;
-    lastName: String;
-
-    constructor(us: string = "", pa: string, em: string, ph: string, fi: string = "", la: string = "") {
-        this.username = us;
-        this.password = pa;
-        this.email = em;
-        this.phone = ph;
-        this.firstName = fi;
-        this.lastName = la;
-    }
+  constructor(
+    em: string,
+    ph: string,
+    us: string = "",
+    pa: string = "",
+    fi: string = "",
+    la: string = ""
+  ) {
+    this.email = em;
+    this.phone = ph;
+    this.username = us;
+    this.password = pa;
+    this.firstName = fi;
+    this.lastName = la;
+  }
 }

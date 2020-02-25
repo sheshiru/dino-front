@@ -12,7 +12,7 @@
       eaque, facilis hic tempora asperiores sit maiores repellat quae!
     </p>
 
-    <h2>{{ show?.title }}</h2>
+    <h2 class="red">{{ show?.title }}</h2>
 
     <table id="resa" class="table table-hover ">
       <thead class="thead-dark">
@@ -80,11 +80,11 @@
         >Vos données ne seront jamais partagées.</small
       >
       <div class="dark-bg">
-        <label for="tel" ng-controller="maxlengthh">Téléphone portable</label>
+        <label for="phone" ng-controller="maxlengthh">Téléphone portable</label>
       </div>
       <input
-        type="number"
-        name="tel"
+        type="text"
+        name="phone"
         class="form-control"
         placeholder="Entrer votre numéro de portable"
         ngModel

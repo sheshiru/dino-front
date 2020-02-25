@@ -1,0 +1,16 @@
+#big_wrapper {
+  width: 70vw;
+  margin: 30px auto;
+  min-height: 100vh;
+  max-height: 100vh;
+}
+h1 {
+  margin: 4% auto;
+}
+.pointer {
+  cursor: pointer;
+}
+
+td:focus {
+  outline: none;
+}

@@ -1,1 +1,69 @@
-<p>user-add works!</p>
+<div id="big_wrapper">
+  <section>
+    <form
+      id="add_user_form"
+      class="form-group"
+      (ngSubmit)="addUser(f)"
+      #f="ngForm"
+    >
+      <h1 class="dark-bg">Create user</h1>
+      <label for="title">username</label>
+      <input
+        [(ngModel)]="username"
+        id="username"
+        type="text"
+        name="username"
+        placeholder="username"
+        class="form-control"
+      />
+      <label for="password">Password</label>
+      <input
+        [(ngModel)]="password"
+        id="password"
+        type="password"
+        name="password"
+        placeholder="password"
+        class="form-control"
+      />
+      <label for="email">Email</label>
+      <input
+        [(ngModel)]="email"
+        type="text"
+        id="email"
+        name="email"
+        placeholder="email"
+        class="form-control"
+      />
+      <label for="phone">Phone</label>
+      <input
+        [(ngModel)]="phone"
+        id="phone"
+        type="text"
+        name="phone"
+        placeholder="phone"
+        class="form-control"
+      />
+      <label for="firstName">Firstname</label>
+      <input
+        [(ngModel)]="firstName"
+        type="text"
+        id="firstName"
+        name="firstName"
+        placeholder="firstName"
+        class="form-control"
+      />
+      <label for="lastName">Lastname</label>
+      <input
+        [(ngModel)]="lastName"
+        type="text"
+        id="lastName"
+        name="lastName"
+        placeholder="lastName"
+        class="form-control"
+      />
+
+      <input type="submit" value="Ajouter un user" />
+    </form>
+  </section>
+  <button [routerLink]="['../user-list']">Go back to users dashboard</button>
+</div>

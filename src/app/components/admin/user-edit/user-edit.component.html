@@ -1,1 +1,64 @@
-<p>user-edit works!</p>
+<div id="big_wrapper">
+  <section>
+    <form id="edit_user_form" class="form-group" (submit)="editOneUser()">
+      <h1 class="dark-bg">Edit user</h1>
+      <label for="title">username</label>
+      <input
+        [ngModel]="user?.username"
+        (ngModelChange)="user.username = $event"
+        id="username"
+        type="text"
+        name="username"
+        class="form-control"
+      />
+      <label for="password">Password</label>
+      <input
+        [ngModel]="user?.password"
+        (ngModelChange)="user.password = $event"
+        id="password"
+        type="password"
+        name="password"
+        class="form-control"
+      />
+      <label for="email">Email</label>
+      <input
+        [ngModel]="user?.email"
+        (ngModelChange)="user.email = $event"
+        type="text"
+        id="email"
+        name="email"
+        class="form-control"
+      />
+      <label for="phone">Phone</label>
+      <input
+        [ngModel]="user?.phone"
+        (ngModelChange)="user.phone = $event"
+        id="phone"
+        type="text"
+        name="phone"
+        class="form-control"
+      />
+      <label for="firstName">Firstname</label>
+      <input
+        [ngModel]="user?.firstName"
+        (ngModelChange)="user.firstName = $event"
+        type="text"
+        id="firstName"
+        name="firstName"
+        class="form-control"
+      />
+      <label for="lastName">Lastname</label>
+      <input
+        [ngModel]="user?.lastName"
+        (ngModelChange)="user.lastName = $event"
+        type="text"
+        id="lastName"
+        name="lastName"
+        class="form-control"
+      />
+
+      <input type="submit" value="Edit user" />
+    </form>
+  </section>
+  <button [routerLink]="['../../user-list']">Go back to users dashboard</button>
+</div>

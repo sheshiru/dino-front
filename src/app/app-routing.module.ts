@@ -65,7 +65,16 @@ const routes: Routes = [
       },
       { path: "user-list", component: UserListComponent },
       { path: "user-add", component: UserAddComponent },
-      { path: "user-edit", component: UserEditComponent },
+      {
+        path: "user-edit",
+        children: [
+          { path: "", component: UserEditComponent },
+          {
+            path: ":id",
+            component: UserEditComponent
+          }
+        ]
+      },
       { path: "user/:id", component: UserViewComponent },
       { path: "user-delete", component: UserDeleteComponent }
     ]

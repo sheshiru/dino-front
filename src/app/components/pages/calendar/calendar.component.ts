@@ -8,9 +8,9 @@ import { ShowService } from "src/app/services/show.service";
 })
 export class CalendarComponent implements OnInit {
   shows: object;
-  constructor(private showService: ShowService) {}
+  constructor(private sS: ShowService) {}
 
   ngOnInit() {
-    this.showService.getShows().subscribe(data => (this.shows = data));
+    this.sS.getShows().subscribe(data => (this.shows = data));
   }
 }
