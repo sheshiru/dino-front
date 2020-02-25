@@ -26,6 +26,7 @@ import { ResaComponent } from "./components/pages/resa/resa.component";
 import { DetailsComponent } from "./components/pages/details/details.component";
 import { CalendarComponent } from "./components/pages/calendar/calendar.component";
 import { ShowAddDateComponent } from "./components/admin/show-add-date/show-add-date.component";
+import { MailService } from './services/mail.service';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,7 @@ import { ShowAddDateComponent } from "./components/admin/show-add-date/show-add-
     ReactiveFormsModule,
     MDBBootstrapModule.forRoot()
   ],
-  providers: [Validators],
+  providers: [MailService, Validators],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
