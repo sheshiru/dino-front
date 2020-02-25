@@ -51,7 +51,7 @@ const routes: Routes = [
         component: ShowAddComponent
       },
       {
-        path: "show-add-date",
+        path: "show-add-date/:id",
         component: ShowAddDateComponent
       },
       {

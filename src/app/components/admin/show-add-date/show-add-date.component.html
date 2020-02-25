@@ -1,1 +1,9 @@
-<p>show-add-date works!</p>
+<p>{{ show?.title }}</p>
+
+<div *ngFor="let date of show?.dates">
+    {{date.meetUp}}
+</div>
+<form (submit)="submit($event)">
+        <input [(ngModel)]="ndate" type="date" name="ndate" class="form-control" />
+        <input type="submit" class="btn btn-primary" value="Ajouter cette date"/>
+</form>

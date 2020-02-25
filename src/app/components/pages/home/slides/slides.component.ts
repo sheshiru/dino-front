@@ -6,6 +6,7 @@ import { ShowService } from "src/app/services/show.service";
   templateUrl: "./slides.component.html",
   styleUrls: ["./slides.component.scss"]
 })
+
 export class SlidesComponent implements OnInit {
   shows: object;
   constructor(private showService: ShowService) {}
