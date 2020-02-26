@@ -34,7 +34,9 @@
     </tbody>
   </table>
 
-  <button class="btn btn-info" [routerLink]="['user-edit']">Edit</button>
+  <button class="btn btn-info" [routerLink]="['../../user-edit', user?._id]">
+    Edit
+  </button>
   <button
     class="btn btn-danger"
     (click)="deleteOne()"

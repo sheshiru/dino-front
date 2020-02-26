@@ -7,10 +7,13 @@ import { UserService } from "src/app/services/user.service";
   styleUrls: ["./user-list.component.scss"]
 })
 export class UserListComponent implements OnInit {
-  users: object;
-  constructor(private userService: UserService) {}
+  users;
+  constructor(private uS: UserService) {}
 
   ngOnInit() {
-    this.userService.getUsers().subscribe(data => (this.users = data));
+    this.uS.getUsers().subscribe(data => (this.users = data));
   }
+  deleteOne = id => {
+    return this.uS.deleteUser(id);
+  };
 }

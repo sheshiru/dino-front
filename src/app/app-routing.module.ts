@@ -14,14 +14,11 @@ import { ShowViewComponent } from "./components/admin/show-view/show-view.compon
 import { ShowEditComponent } from "./components/admin/show-edit/show-edit.component";
 import { CalendarComponent } from "./components/pages/calendar/calendar.component";
 import { ShowAddDateComponent } from "./components/admin/show-add-date/show-add-date.component";
-import { NavbarComponent } from "./components/pages/navbar/navbar.component";
-import { FooterComponent } from "./components/pages/footer/footer.component";
 import { ResaComponent } from "./components/pages/resa/resa.component";
 import { DetailsComponent } from "./components/pages/details/details.component";
-import { LiveShowComponent } from './components/pages/live-show/live-show.component';
-import { HomeComponent } from './components/pages/home/home.component';
-import { ContactComponent } from './components/pages/contact/contact.component';
-
+import { HomeComponent } from "./components/pages/home/home.component";
+import { ContactComponent } from "./components/pages/contact/contact.component";
+import { NotFoundComponent } from "./components/pages/not-found/not-found.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -76,7 +73,9 @@ const routes: Routes = [
         ]
       },
       { path: "user/:id", component: UserViewComponent },
-      { path: "user-delete", component: UserDeleteComponent }
+      { path: "user-delete", component: UserDeleteComponent },
+      { path: "not-found", component: NotFoundComponent },
+      { path: "**", redirectTo: "not-found" }
     ]
   }
 ];

@@ -28,6 +28,6 @@ export class UserViewComponent implements OnInit {
   }
   deleteOne = () => {
     console.log("deleted", this.id);
-    return this.uS.deleteUser(this.id);
+    this.uS.deleteUser(this.id);
   };
 }

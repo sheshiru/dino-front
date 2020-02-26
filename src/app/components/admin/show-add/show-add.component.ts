@@ -15,7 +15,6 @@ export class ShowAddComponent implements OnInit {
   pictures: string[];
   descriptions: string[];
   price: number[];
-  dates: Date[];
   show: Show;
   constructor(private sS: ShowService) {}
 
@@ -29,8 +28,7 @@ export class ShowAddComponent implements OnInit {
       this.place,
       this.pictures,
       this.descriptions,
-      this.price,
-      this.dates
+      this.price
     );
     this.sS.createShow(this.show);
     {

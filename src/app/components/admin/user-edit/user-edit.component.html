@@ -57,8 +57,13 @@
         class="form-control"
       />
 
-      <input type="submit" value="Edit user" />
+      <input class="btn btn-info" type="submit" value="Edit user" />
     </form>
   </section>
-  <button [routerLink]="['../../user-list']">Go back to users dashboard</button>
+  <button class="btn btn-secondary" [routerLink]="['../../user', user?._id]">
+    Go Back to user profile
+  </button>
+  <button class="btn btn-secondary" [routerLink]="['../../user-list']">
+    Go back to users dashboard
+  </button>
 </div>
