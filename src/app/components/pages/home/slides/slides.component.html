@@ -88,19 +88,19 @@
     <mdb-carousel-item class="d-block w-100">
       <img
         class="d-block w-100 relative"
-        [src]="show.pictures"
-        [alt]="show.title"
+        [src]="show?.pictures"
+        [alt]="show?.title"
       />
       <div class="infos-container">
         <h1 class="title">{{ show.title }}</h1>
         <div class="btn-container">
           <button
-            [routerLink]="['/details', show._id]"
+            [routerLink]="['/details', show?._id]"
             class=" btn btn-warning btn-details"
           >
             Découvrir</button
           ><button
-            [routerLink]="['/resa', show._id]"
+            [routerLink]="['/resa', show?._id]"
             class="btn btn-secondary btn-resa"
           >
             Réserver

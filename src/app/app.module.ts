@@ -27,7 +27,7 @@ import { DetailsComponent } from "./components/pages/details/details.component";
 import { CalendarComponent } from "./components/pages/calendar/calendar.component";
 import { ShowAddDateComponent } from "./components/admin/show-add-date/show-add-date.component";
 import { MailService } from "./services/mail.service";
-import { NotFoundComponent } from './components/pages/not-found/not-found.component';
+import { NotFoundComponent } from "./components/pages/not-found/not-found.component";
 
 @NgModule({
   declarations: [

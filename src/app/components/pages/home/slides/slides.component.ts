@@ -6,12 +6,13 @@ import { ShowService } from "src/app/services/show.service";
   templateUrl: "./slides.component.html",
   styleUrls: ["./slides.component.scss"]
 })
-
 export class SlidesComponent implements OnInit {
-  shows: object;
-  constructor(private showService: ShowService) {}
+  shows;
+  constructor(private sS: ShowService) {}
 
   ngOnInit() {
-    this.showService.getShows().subscribe(data => (this.shows = data));
+    this.sS.getShows().subscribe(data => {
+      this.shows = data;
+    });
   }
 }

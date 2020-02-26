@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { UserService } from "src/app/services/user.service";
-import { ActivatedRoute, ParamMap } from "@angular/router";
+import { ActivatedRoute, ParamMap, Router } from "@angular/router";
 
 @Component({
   selector: "app-user-view",
@@ -8,7 +8,7 @@ import { ActivatedRoute, ParamMap } from "@angular/router";
   styleUrls: ["./user-view.component.scss"]
 })
 export class UserViewComponent implements OnInit {
-  user: object;
+  user;
   email: string;
   phone: string;
   username: string;
@@ -16,7 +16,11 @@ export class UserViewComponent implements OnInit {
   firstName: string;
   lastName: string;
   id: string;
-  constructor(private uS: UserService, private route: ActivatedRoute) {}
+  constructor(
+    private uS: UserService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) => {
@@ -27,7 +31,7 @@ export class UserViewComponent implements OnInit {
     });
   }
   deleteOne = () => {
-    console.log("deleted", this.id);
     this.uS.deleteUser(this.id);
+    this.router.navigate(["/admin/user-list"]);
   };
 }
