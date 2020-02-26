@@ -1,9 +1,12 @@
 <p>{{ show?.title }}</p>
 
-<ul *ngFor="let date of show?.dates">
-    <li>{{date.meetUp}}</li>
+<ul *ngFor="let date of arrayDates">
+    <li>
+        {{date}} 
+        <button id="removeBtn" (click)="submitDelete(date)">Supprimer</button>
+    </li>
 </ul>
-<form (submit)="submit($event)">
+<form (submit)="submitAdd($event)">
         <input [(ngModel)]="ndate" type="date" name="ndate" class="form-control" />
         <input type="submit" class="btn btn-primary" value="Ajouter cette date"/>
 </form>

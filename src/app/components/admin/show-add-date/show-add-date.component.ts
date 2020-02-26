@@ -10,6 +10,8 @@ import { Show } from "src/app/models/show.model";
 })
 export class ShowAddDateComponent implements OnInit {
   show;
+  dates;
+  arrayDates: Date[] = [];
   id: string;
   ndate;
   constructor(private sS: ShowService, private route: ActivatedRoute) {
@@ -21,13 +23,23 @@ export class ShowAddDateComponent implements OnInit {
       this.id = params.get("id");
       this.sS.getOneShow(this.id).subscribe(data => {
         this.show = data;
+        this.dates = this.show.dates;
+        for (let d of this.dates) {
+          this.arrayDates.push(d.meetUp);
+        }    
+        this.arrayDates.sort();       
       });
     });
   }
-  submit(e) { 
+  submitAdd(e) { 
     this.sS.addDate(this.show, this.ndate).subscribe(data=>{
       this.show = data;
     });
+  }
+
+  submitDelete() {
+    console.log("Rrrrrr")
+    
   }
 
 }
