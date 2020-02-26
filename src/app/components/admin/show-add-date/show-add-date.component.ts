@@ -25,8 +25,9 @@ export class ShowAddDateComponent implements OnInit {
     });
   }
   submit(e) { 
-    e.preventDefault()  
-    this.sS.addDate(this.show, this.ndate);
+    this.sS.addDate(this.show, this.ndate).subscribe(data=>{
+      this.show = data;
+    });
   }
 
 }

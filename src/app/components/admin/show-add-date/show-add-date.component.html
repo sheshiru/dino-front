@@ -1,8 +1,8 @@
 <p>{{ show?.title }}</p>
 
-<div *ngFor="let date of show?.dates">
-    {{date.meetUp}}
-</div>
+<ul *ngFor="let date of show?.dates">
+    <li>{{date.meetUp}}</li>
+</ul>
 <form (submit)="submit($event)">
         <input [(ngModel)]="ndate" type="date" name="ndate" class="form-control" />
         <input type="submit" class="btn btn-primary" value="Ajouter cette date"/>

@@ -26,6 +26,6 @@ export class ShowService {
   }
   addDate(show, ndate) {
     const sdate = { date: ndate };
-    return this.http.patch<Show>(showUrl.shows + "/add-date/" + show._id, sdate).subscribe();
+    return this.http.patch<Show>(showUrl.shows + "/add-date/" + show._id, sdate);
   }
 }
