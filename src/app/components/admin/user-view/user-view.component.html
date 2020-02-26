@@ -34,12 +34,16 @@
     </tbody>
   </table>
 
-  <div>
-    <button [routerLink]="['user-edit']">Edit</button>
-    <button (click)="deleteOne()" [routerLink]="['../../user-list']">
-      Delete
-    </button>
-  </div>
+  <button class="btn btn-info" [routerLink]="['user-edit']">Edit</button>
+  <button
+    class="btn btn-danger"
+    (click)="deleteOne()"
+    [routerLink]="['../../user-list']"
+  >
+    Delete
+  </button>
 
-  <button [routerLink]="['../../user-list']">Go Back to user list</button>
+  <button class="btn btn-secondary" [routerLink]="['../../user-list']">
+    Go Back to user list
+  </button>
 </div>

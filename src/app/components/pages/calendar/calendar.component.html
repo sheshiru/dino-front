@@ -27,7 +27,11 @@
                 {{ show.title }}
               </button>
 
-              <button class="btn btn-resa" [routerLink]="['/resa', show._id]">
+              <button
+                class="btn btn-resa"
+                [routerLink]="['/resa', show._id]"
+                [ngStyle]="{ backgroundColor: getColor() }"
+              >
                 Réserver
               </button>
             </div>
@@ -42,6 +46,12 @@
           <div class="card-body">
             {{ show.descriptions }}
           </div>
+          <button
+            [routerLink]="['/details', show._id]"
+            class="btn btn-secondary"
+          >
+            Découvrir plus
+          </button>
         </div>
       </div>
     </div>

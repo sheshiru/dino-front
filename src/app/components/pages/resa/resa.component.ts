@@ -16,13 +16,14 @@ export class ResaComponent implements OnInit {
   email;
   phone;
   nbchild: number;
-  nbadult: number;
+  nbadult: number = 1;
   adultPrice: number = 20;
   childPrice: number = 12;
   showMsg: boolean;
   msgError: string = "Une erreur s'est produite, veuillez réessayer";
   msgConfirm: string =
     "Votre réservation a bien été prise en compte. Vous recevrez d'ici peu un mail d'informations importantes concernant l'acces au spectacle";
+  resaStatus: boolean;
   constructor(
     private sS: ShowService,
     private uS: UserService,
@@ -65,6 +66,7 @@ export class ResaComponent implements OnInit {
     this.uS.createUser(this.user);
     // console.log(email, phone);
     this.showMsg = true;
+    this.resaStatus = true;
     form.reset();
   };
 }

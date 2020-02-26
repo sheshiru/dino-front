@@ -92,11 +92,17 @@
         [alt]="show.title"
       />
       <div class="infos-container">
-        <h1>{{ show.title }}</h1>
+        <h1 class="title">{{ show.title }}</h1>
         <div class="btn-container">
-          <button class="btn-details" [routerLink]="['/details', show._id]">
+          <button
+            [routerLink]="['/details', show._id]"
+            class=" btn btn-warning btn-details"
+          >
             Découvrir</button
-          ><button class="btn-resa" [routerLink]="['/resa', show._id]">
+          ><button
+            [routerLink]="['/resa', show._id]"
+            class="btn btn-secondary btn-resa"
+          >
             Réserver
           </button>
         </div>
