@@ -1,17 +1,21 @@
-body {
-    height:900px;
+*{
+    box-sizing:border-box;
+    padding-left:0;
+    padding-right:0;
 }
-footer {
-background: #343a40;
-width: 100%;
-height: 48px;
-position: fixed;
-z-index:300;
-bottom: 0;
-display: none;
-}
-
-p{
+footer{
+    background: #343a40;
     color:rgba(255,255,255,.75);
+    min-width: 100vw;
+    text-align:center;
+    padding:1rem 1rem 3rem 1rem;
+   
 }
 
+small a{
+    color:white;
+}
+
+small a:hover{
+    color:#c94930;
+}

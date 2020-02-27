@@ -1,0 +1,20 @@
+
+#main{
+    z-index:10;
+}
+#navbar{
+    min-width: 100vw;
+    position: fixed;
+    z-index:300;
+    bottom: 0;
+}
+#footer{
+    background: #343a40;
+    color:rgba(255,255,255,.75);
+    min-width: 100vw;
+    height:5rem;
+    position: fixed;
+    z-index:0;
+    bottom: 0;
+    }
+
