@@ -1,32 +1,34 @@
-import { Component } from '@angular/core';
-import * as $ from 'jquery'; 
+import { Component } from "@angular/core";
+import * as $ from "jquery";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
   title = "Moments d'intelligence";
 
-
   ngOnInit() {
-    $(document).ready(function () {
-      $(function () {
-
-        $(window).scroll(function () {
-          if ($(this).scrollTop() < 1200) {
-            $('#navbar').css({ "position": "fixed", "bottom": "0", "transition": "all 1s"});
+    $(document).ready(function() {
+      $(function() {
+        $(window).scroll(function() {
+          if (
+            $(this).scrollTop() <
+            document.body.clientHeight - window.innerHeight
+          ) {
+            $("#footer").css({
+              height: "0",
+              transition: "all 0.8s"
+            });
           } else {
-            $('#navbar').css({ "position": "fixed", "bottom": "5rem", "transition": "all 1s" });
+            $("#footer").css({
+              height: "5rem",
+              transition: "all 0.8s"
+            });
           }
         });
-
       });
-    })
+    });
   }
 }
-
-
-
-

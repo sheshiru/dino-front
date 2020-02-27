@@ -2,6 +2,14 @@
 <div class="container-fluid">
   <section id="section_resa">
     <h1 class="title-resa">Réservation</h1>
+    <label for="date">Veuillez sélectionner une date</label>
+    <select [(ngModel)]="selected" name="date">
+      <option id="date" *ngFor="let date of show?.dates" [ngValue]="date">{{
+        date.meetUp
+      }}</option>
+    </select>
+    {{ selected?._id }}
+
     <p>
       Text explicatif sur la nécessité de renseigner son tel, Text explicatif
       sur la nécessité de renseigner son tel Text explicatif sur la nécessité de

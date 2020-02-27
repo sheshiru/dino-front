@@ -1,25 +1,16 @@
-* {
-  overflow: hidden;
-}
 #details_text {
   width: 75vw;
   margin: auto;
-  padding-bottom: 5%;
 }
 .img-container {
   width: 80vw;
-  display: flex;
-  justify-content: flex-start;
   margin: auto;
 }
-#pics > div > img {
-  width: 30%;
-  margin: auto;
+.description {
+  margin-bottom: 50px;
 }
 .details-wrapper {
   margin: auto;
-  min-height: 100vh;
-  padding-bottom: 5%;
   text-align: center;
 }
 h1 {
@@ -31,10 +22,4 @@ h1 {
 }
 p {
   text-align: justify;
-}
-#headingOne > button,
-.btn-link,
-.btn,
-button {
-  color: inherit;
 }

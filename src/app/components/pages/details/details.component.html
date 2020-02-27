@@ -8,7 +8,7 @@
         </button>
       </h1>
 
-      <p>
+      <p class="description">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
         laborum delectus, esse libero itaque veritatis aut pariatur, inventore
         qui magnam earum saepe ex! Nam voluptatem reprehenderit eligendi ex,
@@ -27,22 +27,30 @@
     </section>
 
     <section id="pics">
-      <div class="img-container">
-        <img
-          src="./../../../../assets/images/details-pic1.jpg"
-          class="rounded float-left img-thumbnail "
-          alt="pic1"
-        />
-        <img
-          src="./../../../../assets/images/details-pic2.jpg"
-          class="rounded img-thumbnail "
-          alt="pic2"
-        />
-        <img
-          src="./../../../../assets/images/details-pic3.jpg"
-          class="rounded float-right img-thumbnail"
-          alt="pic3"
-        />
+      <div class="img-container d-flex col-xl-9">
+        <div class="row">
+          <div class="col-xl-4 col-12 ">
+            <img
+              src="./../../../../assets/images/details-pic1.jpg"
+              class="rounded float-left img-thumbnail "
+              alt="pic1"
+            />
+          </div>
+          <div class="col-xl-4 col-12">
+            <img
+              src="./../../../../assets/images/details-pic2.jpg"
+              class="rounded img-thumbnail "
+              alt="pic2"
+            />
+          </div>
+          <div class="col-xl-4 col-12">
+            <img
+              src="./../../../../assets/images/details-pic3.jpg"
+              class="rounded float-right img-thumbnail"
+              alt="pic3"
+            />
+          </div>
+        </div>
       </div>
     </section>
     <app-live-show [collapse]="collapse"></app-live-show>

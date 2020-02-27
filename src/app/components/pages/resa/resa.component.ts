@@ -11,6 +11,7 @@ import { User } from "src/app/models/user.model";
   styleUrls: ["./resa.component.scss"]
 })
 export class ResaComponent implements OnInit {
+  selected;
   show;
   user: User;
   email;
@@ -66,6 +67,6 @@ export class ResaComponent implements OnInit {
     this.showMsg = true;
     this.resaStatus = true;
     form.reset();
-    console.log(this.nbadult, this.nbchild);
+    // console.log(this.nbadult, this.nbchild);
   };
 }
