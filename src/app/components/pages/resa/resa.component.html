@@ -5,7 +5,7 @@
     <label for="date">Veuillez sélectionner une date</label>
     <select [(ngModel)]="selected" name="date">
       <option id="date" *ngFor="let date of show?.dates" [ngValue]="date">{{
-        date.meetUp
+        date.meetUp | date
       }}</option>
     </select>
     {{ selected?._id }}

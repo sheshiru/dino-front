@@ -1,12 +1,21 @@
-<p>{{ show?.title }}</p>
+<div id="big_wrapper">
+  <h1 class="dark-bg">Liste des dates de {{ show?.title }}</h1>
 
-<ul>
+  <ul>
     <li *ngFor="let date of show?.dates">
-        {{date.meetUp}} 
-        <button name="removeBtn" (click)="submitDelete(date._id)">Supprimer</button>
+      {{ date.meetUp | date }}
+      <button
+        class="btn btn-danger"
+        name="removeBtn"
+        (click)="submitDelete(date._id)"
+      >
+        Supprimer
+      </button>
     </li>
-</ul>
-<form (submit)="submitAdd()">
-        <input [(ngModel)]="ndate" type="date" name="ndate" class="form-control" />
-        <input type="submit" class="btn btn-primary" value="Ajouter cette date"/>
-</form>
+  </ul>
+  <form (submit)="submitAdd()">
+    <h1 class="dark-bg">Ajouter une date</h1>
+    <input [(ngModel)]="ndate" type="date" name="ndate" class="form-control" />
+    <input type="submit" class="btn btn-primary" value="Ajouter cette date" />
+  </form>
+</div>

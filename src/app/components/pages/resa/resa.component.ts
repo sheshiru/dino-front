@@ -64,6 +64,7 @@ export class ResaComponent implements OnInit {
     const phone = form.value["phone"];
     this.user = new User(email, phone);
     this.uS.createUser(this.user);
+    this.uS.sendResa();
     this.showMsg = true;
     this.resaStatus = true;
     form.reset();
