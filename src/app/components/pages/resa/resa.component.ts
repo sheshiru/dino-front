@@ -1,9 +1,12 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { NgForm } from "@angular/forms";
-import { ShowService } from "src/app/services/show.service";
 import { ActivatedRoute, ParamMap } from "@angular/router";
+import { ReserService } from 'src/app/services/reser.service';
+import { ShowService } from "src/app/services/show.service";
 import { UserService } from "src/app/services/user.service";
 import { User } from "src/app/models/user.model";
+import { Show } from "src/app/models/show.model";
+import { Reser } from "src/app/models/Reser.model";
 
 @Component({
   selector: "app-resa",
@@ -26,6 +29,7 @@ export class ResaComponent implements OnInit {
     "Votre réservation a bien été prise en compte. Vous recevrez d'ici peu un mail d'informations importantes concernant l'acces au spectacle";
   resaStatus: boolean;
   constructor(
+    private rS: ReserService,
     private sS: ShowService,
     private uS: UserService,
     private route: ActivatedRoute
