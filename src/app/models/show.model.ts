@@ -11,7 +11,7 @@ export class Show {
   constructor(
     ti: string,
     ac: boolean = true,
-    du: number,
+    du: number = 0,
     pl: string[] = [],
     pi: string[] = [],
     de: string[] = [],

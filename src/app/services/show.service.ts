@@ -8,7 +8,6 @@ import { Show } from "../models/show.model";
 })
 export class ShowService {
   shows;
-  meetUpDate: any;
   constructor(private http: HttpClient) {
     this.getShows;
   }
@@ -25,7 +24,11 @@ export class ShowService {
     return this.http.patch<Show>(showUrl.shows + "/" + show._id, show).subscribe();
   }
   addDate(show, ndate) {
-    const sdate = { date: ndate };
-    return this.http.patch<Show>(showUrl.shows + "/add-date/" + show._id, sdate);
+    const query = { date: ndate };
+    return this.http.patch<Show>(showUrl.shows + "/add-date/" + show._id, query);
+  }
+  delDate(show, dateId) {
+    const query = { idDate: dateId };
+    return this.http.patch<Show>(showUrl.shows + "/del-date/" + show._id, query);
   }
 }
