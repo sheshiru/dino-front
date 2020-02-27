@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ShowService } from 'src/app/services/show.service';
 import { ActivatedRoute, ParamMap } from "@angular/router";
-import { Show } from "src/app/models/show.model";
 
 @Component({
   selector: 'app-show-add-date',
@@ -10,12 +9,11 @@ import { Show } from "src/app/models/show.model";
 })
 export class ShowAddDateComponent implements OnInit {
   show;
+  dates;
   id: string;
   ndate;
-  constructor(private sS: ShowService, private route: ActivatedRoute) {
-    
- }
-
+  dateId: string;
+  constructor(private sS: ShowService, private route: ActivatedRoute) {}
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.id = params.get("id");
@@ -24,9 +22,17 @@ export class ShowAddDateComponent implements OnInit {
       });
     });
   }
-  submit(e) { 
-    e.preventDefault()  
-    this.sS.addDate(this.show, this.ndate);
+  submitAdd() { 
+    if (this.ndate){
+      this.sS.addDate(this.show, this.ndate).subscribe(data=>{
+        this.show = data;
+      });
+    }
+  }
+  submitDelete(dateId) {
+    this.sS.delDate(this.show, dateId).subscribe(data => {
+      this.show = data;
+    });
   }
 
 }
