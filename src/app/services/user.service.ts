@@ -29,9 +29,7 @@ export class UserService {
   deleteUser = id => {
     return this.http.delete(`${userUrl.users}/${id}`).subscribe();
   };
-  sendResa = () => {
-    const user = { email: "zz@ss.com", phone: "8899" };
-    const resa = { iDdateShow: "123", nbAdult: "1", nbChild: "1" };
-    return this.http.post<User>(userUrl.users, { user, resa });
+  sendResa = (userOb, resaOb) => {
+    return this.http.post(userUrl.users + "/add-resa", { user: userOb, resa: resaOb }).subscribe();
   };
 }

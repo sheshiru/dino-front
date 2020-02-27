@@ -66,12 +66,13 @@ export class ResaComponent implements OnInit {
   onSubmit = (form: NgForm) => {
     const email = form.value["email"];
     const phone = form.value["phone"];
-    this.user = new User(email, phone);
-    this.uS.createUser(this.user);
-    this.uS.sendResa();
+    const nbadult = this.nbadult;
+    const nbchild = this.nbchild;
+    const idDate = this.selected._id;
+    const userOb = { email: email, phone: phone };
+    const resaOb = { iDdateShow: idDate, nbAdult: nbadult, nbChild: nbchild };
+    this.uS.sendResa(userOb, resaOb);
     this.showMsg = true;
-    this.resaStatus = true;
     form.reset();
-    // console.log(this.nbadult, this.nbchild);
   };
 }
