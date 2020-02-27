@@ -24,12 +24,6 @@
                   >Home <span class="sr-only">(current)</span></a
                 >
               </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink="contact">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/calendar']">Calendrier</a>
-              </li>
               <li class="nav-item dropdown dropup">
                 <a
                   class="nav-link dropdown-toggle"
@@ -52,6 +46,14 @@
                     >{{ show?.title }}</a
                   >
                 </div>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/calendar']">Calendrier</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" routerLink="contact">Contact</a>
               </li>
             </ul>
           </div>
