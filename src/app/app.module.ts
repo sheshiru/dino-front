@@ -29,6 +29,8 @@ import { ShowAddDateComponent } from "./components/admin/show-add-date/show-add-
 import { MailService } from "./services/mail.service";
 import { NotFoundComponent } from "./components/pages/not-found/not-found.component";
 import { ParkingComponent } from './components/pages/parking/parking.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
 
 @NgModule({
   declarations: [
@@ -63,6 +65,7 @@ import { ParkingComponent } from './components/pages/parking/parking.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    AngularFontAwesomeModule,
     MDBBootstrapModule.forRoot()
   ],
   providers: [MailService, Validators],
