@@ -32,3 +32,9 @@ h1 {
 p {
   text-align: justify;
 }
+#headingOne > button,
+.btn-link,
+.btn,
+button {
+  color: inherit;
+}

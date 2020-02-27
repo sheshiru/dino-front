@@ -1,59 +1,64 @@
-<section>
-  <form (submit)="addShow($event)" id="add_show_form" class="form-group">
-    <h1 class="dark-bg">Create show</h1>
-    <label for="title">Title</label>
-    <input
-      [(ngModel)]="title"
-      id="title"
-      type="text"
-      name="title"
-      placeholder="title"
-      class="form-control"
-    />
-    <label for="duration">Duration</label>
-    <input
-      [(ngModel)]="duration"
-      id="duration"
-      type="number"
-      name="duration"
-      placeholder="duration"
-      class="form-control"
-    />
-    <label for="place">Place</label>
-    <input
-      [(ngModel)]="place"
-      type="text"
-      id="place"
-      name="place"
-      class="form-control"
-    />
-    <label for="pictures">Picture</label>
-    <input
-      [(ngModel)]="pictures"
-      id="pictures"
-      type="string"
-      name="pictures"
-      class="form-control"
-    />
-    <label for="descriptions">Description</label>
-    <input
-      [(ngModel)]="descriptions"
-      type="text"
-      id="descriptions"
-      name="descriptions"
-      class="form-control"
-    />
-    <label for="price">Price</label>
-    <input
-      [(ngModel)]="price"
-      type="number"
-      id="price"
-      name="price"
-      class="form-control"
-    />
-    <label for="active">Active</label>
-    <input type="checkbox" name="active" id="active" class="form-control" />
+<div id="big_wrapper">
+  <section>
+    <form (submit)="addShow($event)" id="add_show_form" class="form-group">
+      <h1 class="dark-bg">Create show</h1>
+      <label for="title">Title</label>
+      <input
+        [(ngModel)]="title"
+        id="title"
+        type="text"
+        name="title"
+        placeholder="title"
+        class="form-control"
+      />
+      <label for="duration">Duration</label>
+      <input
+        [(ngModel)]="duration"
+        id="duration"
+        type="number"
+        name="duration"
+        placeholder="duration"
+        class="form-control"
+      />
+      <label for="place">Place</label>
+      <input
+        [(ngModel)]="place"
+        type="text"
+        id="place"
+        name="place"
+        class="form-control"
+      />
+      <label for="pictures">Picture</label>
+      <input
+        [(ngModel)]="pictures"
+        id="pictures"
+        type="string"
+        name="pictures"
+        class="form-control"
+      />
+      <label for="descriptions">Description</label>
+      <input
+        [(ngModel)]="descriptions"
+        type="text"
+        id="descriptions"
+        name="descriptions"
+        class="form-control"
+      />
+      <label for="price">Price</label>
+      <input
+        [(ngModel)]="price"
+        type="number"
+        id="price"
+        name="price"
+        class="form-control"
+      />
+      <label for="active">Active</label>
+      <input type="checkbox" name="active" id="active" class="form-control" />
 
-    <input type="submit" value="Ajouter un show" />
-  </form>
-</section>
+      <input class="btn btn-info" type="submit" value="Ajouter un show" />
+    </form>
+  </section>
+  <button class="btn btn-secondary" [routerLink]="['../show-list']">
+    Go back to shows dashboard
+  </button>
+</div>

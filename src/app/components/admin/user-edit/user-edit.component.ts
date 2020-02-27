@@ -8,7 +8,7 @@ import { ActivatedRoute, ParamMap } from "@angular/router";
   styleUrls: ["./user-edit.component.scss"]
 })
 export class UserEditComponent implements OnInit {
-  user: object;
+  user;
   email: string;
   phone: string;
   username: string;

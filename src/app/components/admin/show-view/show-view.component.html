@@ -1,39 +1,82 @@
-<section>
-  <form (submit)="submit()" id="edit_show_form" class="form-group">
-    <h1 class="dark-bg">Show</h1>
- 
-    <label for="title">Title</label>
-    <input type="text" name="title" id="title" class="form-control"
-    [ngModel]="show?.title"
-    (ngModelChange)="show.title = $event"/>
-    <label for="duration">Duration</label>
-    <input type="number" name="duration" id="duration" class="form-control"
-    [ngModel]="show?.duration"
-    (ngModelChange)="show.duration = $event" />
-    <label for="place">Place</label>
-    <input type="text" name="place" id="place" class="form-control"
-    [ngModel]="show?.place"
-    (ngModelChange)="show.place = $event" />
-    <label for="pictures">Picture</label>
-    <input type="image" name="pictures" id="pictures" class="form-control"
-    [ngModel]="show?.pictures"
-    (ngModelChange)="show.pictures = $event" />
-    <label for="descriptions">Description</label>
-    <input type="text" name="descriptions" id="descriptions" class="form-control"
-    [ngModel]="show?.descriptions"
-    (ngModelChange)="show.description = $event" />
-    <label for="price">Price</label>
-    <input type="number" name="price" id="price" class="form-control"
-    [ngModel]="show?.price"
-    (ngModelChange)="show.price = $event" />
-    <label for="active">Active</label>
-    <input type="checkbox" name="active" id="active" class="form-control"
-    [ngModel]="show?.active"
-    (ngModelChange)="show.active = $event" />
-    <!-- <label for="dates">Dates</label>
+<div id="big_wrapper">
+  <section>
+    <form (submit)="submit()" id="edit_show_form" class="form-group">
+      <h1 class="dark-bg">Show edit</h1>
+
+      <label for="title">Title</label>
+      <input
+        type="text"
+        name="title"
+        id="title"
+        class="form-control"
+        [ngModel]="show?.title"
+        (ngModelChange)="show.title = $event"
+      />
+      <label for="duration">Duration</label>
+      <input
+        type="number"
+        name="duration"
+        id="duration"
+        class="form-control"
+        [ngModel]="show?.duration"
+        (ngModelChange)="show.duration = $event"
+      />
+      <label for="place">Place</label>
+      <input
+        type="text"
+        name="place"
+        id="place"
+        class="form-control"
+        [ngModel]="show?.place"
+        (ngModelChange)="show.place = $event"
+      />
+      <label for="pictures">Picture</label>
+      <input
+        type="image"
+        name="pictures"
+        id="pictures"
+        class="form-control"
+        [ngModel]="show?.pictures"
+        (ngModelChange)="show.pictures = $event"
+      />
+      <label for="descriptions">Description</label>
+      <input
+        type="text"
+        name="descriptions"
+        id="descriptions"
+        class="form-control"
+        [ngModel]="show?.descriptions"
+        (ngModelChange)="show.description = $event"
+      />
+      <label for="price">Price</label>
+      <input
+        type="number"
+        name="price"
+        id="price"
+        class="form-control"
+        [ngModel]="show?.price"
+        (ngModelChange)="show.price = $event"
+      />
+      <label for="active">Active</label>
+      <input
+        type="checkbox"
+        name="active"
+        id="active"
+        class="form-control"
+        [ngModel]="show?.active"
+        (ngModelChange)="show.active = $event"
+      />
+      <!-- <label for="dates">Dates</label>
     <input type="date" id="dates" name="dates" class="form-control" /> -->
 
-    <input type="submit" value="Modifier" />
-    <button type="link" [routerLink]="['/admin/show-add-date',show._id]">Dates</button>
-  </form>
-</section>
+      <input class="btn btn-info" type="submit" value="Modifier" />
+      <button
+        class="btn btn-warning"
+        type="link"
+        [routerLink]="['/admin/show-add-date', show._id]"
+      >
+        Dates
+      </button>
+    </form>
+  </section>
+</div>

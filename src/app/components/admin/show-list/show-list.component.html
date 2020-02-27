@@ -1,7 +1,31 @@
-<div class="form-group" *ngFor=" let show of shows">
-  <a [routerLink]="['show', show._id ]">
-    {{ show.title }}
-  </a>
-</div>
+<div id="big_wrapper">
+  <h1>
+    Shows database
+    <button class="btn btn-secondary" [routerLink]="['/admin/show-add']">
+      Add Show
+    </button>
+  </h1>
 
-<button [routerLink]="['user-list']">Go users dashboard</button>
+  <table class="table table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Show</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let show of shows; let i = index">
+      <tr>
+        <th scope="row">{{ i + 1 }}</th>
+        <td>
+          <a [routerLink]="['show', show._id]">
+            {{ show.title }}
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button class="btn btn-secondary" [routerLink]="['user-list']">
+    Go users dashboard
+  </button>
+</div>

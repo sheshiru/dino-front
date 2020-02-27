@@ -85,28 +85,26 @@
   [isControls]="true"
 >
   <ng-container *ngFor="let show of shows">
-    <mdb-carousel-item class="d-block w-100">
-      <img
-        class="d-block w-100 relative"
-        [src]="show?.pictures"
-        [alt]="show?.title"
-      />
-      <div class="infos-container">
-        <h1 class="title">{{ show.title }}</h1>
-        <div class="btn-container">
-          <button
-            [routerLink]="['/details', show?._id]"
-            class=" btn btn-warning btn-details"
-          >
-            Découvrir</button
-          ><button
-            [routerLink]="['/resa', show?._id]"
-            class="btn btn-secondary btn-resa"
-          >
-            Réserver
-          </button>
+    <div class="container-item relative">
+      <mdb-carousel-item class="d-block w-100">
+        <img class="d-block w-100" [src]="show?.pictures" [alt]="show?.title" />
+        <div class="infos-container centered">
+          <h1 class="title">{{ show.title }}</h1>
+          <div class="btn-container">
+            <button
+              [routerLink]="['/details', show?._id]"
+              class=" btn btn-details"
+            >
+              Découvrir</button
+            ><button
+              [routerLink]="['/resa', show?._id]"
+              class="btn btn-secondary btn-resa"
+            >
+              Réserver
+            </button>
+          </div>
         </div>
-      </div>
-    </mdb-carousel-item>
+      </mdb-carousel-item>
+    </div>
   </ng-container>
 </mdb-carousel>
