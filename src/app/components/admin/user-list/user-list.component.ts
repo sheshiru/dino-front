@@ -12,15 +12,10 @@ export class UserListComponent implements OnInit {
   constructor(private uS: UserService, private router: Router) {}
 
   ngOnInit() {
-    console.log("on init");
-
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
-        console.log("subs event");
-
         this.uS.getUsers().subscribe(data => {
           this.users = data;
-          console.log("data");
         });
       }
     });
@@ -32,8 +27,10 @@ export class UserListComponent implements OnInit {
   };
   reloadCurrentRoute(): void {
     let currentUrl = this.router.url;
-    this.router.navigateByUrl("/", { skipLocationChange: true }).then(() => {
-      this.router.navigate([currentUrl]);
-    });
+    this.router
+      .navigateByUrl("/user-list", { skipLocationChange: true })
+      .then(() => {
+        this.router.navigate([currentUrl]);
+      });
   }
 }

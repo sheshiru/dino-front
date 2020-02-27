@@ -18,6 +18,7 @@ import { ResaComponent } from "./components/pages/resa/resa.component";
 import { DetailsComponent } from "./components/pages/details/details.component";
 import { HomeComponent } from "./components/pages/home/home.component";
 import { ContactComponent } from "./components/pages/contact/contact.component";
+import { ParkingComponent } from "./components/pages/parking/parking.component";
 import { NotFoundComponent } from "./components/pages/not-found/not-found.component";
 
 const routes: Routes = [
@@ -73,11 +74,12 @@ const routes: Routes = [
         ]
       },
       { path: "user/:id", component: UserViewComponent },
-      { path: "user-delete", component: UserDeleteComponent },
-      { path: "not-found", component: NotFoundComponent },
-      { path: "**", redirectTo: "not-found" }
+      { path: "user-delete", component: UserDeleteComponent }
     ]
-  }
+  },
+  { path: "parking", component: ParkingComponent },
+  { path: "not-found", component: NotFoundComponent },
+  { path: "**", redirectTo: "not-found" }
 ];
 
 @NgModule({

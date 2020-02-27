@@ -28,6 +28,7 @@ import { CalendarComponent } from "./components/pages/calendar/calendar.componen
 import { ShowAddDateComponent } from "./components/admin/show-add-date/show-add-date.component";
 import { MailService } from "./services/mail.service";
 import { NotFoundComponent } from "./components/pages/not-found/not-found.component";
+import { ParkingComponent } from './components/pages/parking/parking.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { NotFoundComponent } from "./components/pages/not-found/not-found.compon
     DetailsComponent,
     CalendarComponent,
     ShowAddDateComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ParkingComponent
   ],
   imports: [
     BrowserModule,
